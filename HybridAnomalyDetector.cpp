@@ -2,13 +2,20 @@
 #include "HybridAnomalyDetector.h"
 #include "minCircle.h"
 #include "SimpleAnomalyDetector.h"
-HybridAnomalyDetector::HybridAnomalyDetector() {
-	// TODO Auto-generated constructor stub
-
+//HybridAnomalyDetector::HybridAnomalyDetector() {
+//	// TODO Auto-generated constructor stub
+//
+//}
+void HybridAnomalyDetector::setThreshold(float threshold) {
+    HybridAnomalyDetector::threshold = threshold;
 }
 
 HybridAnomalyDetector::~HybridAnomalyDetector() {
 	// TODO Auto-generated destructor stub
+}
+
+float HybridAnomalyDetector::getThreshold() const {
+    return threshold;
 }
 
 float HybridAnomalyDetector::findThreshold(Point **ps, size_t len, correlatedFeatures cfe) {
